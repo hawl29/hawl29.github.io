@@ -1,22 +1,31 @@
-<h2>test edit in local</h2>
-<ul>
-<li>本地测试2：</li>
-
-</ul>
-<ol>
-<li><p>echo &quot;test edit in local&quot; &gt; index.html；</p>
-<p>这句话的意思即是：输出test edit in local字符串到一个位置index.html；</p>
-<p>如果index.html存在，我们即【清空其内容，更新为Hello,Binn】，不存在，创建之；</p>
-</li>
-<li><p>git add --all</p>
-<p>添加当前目录下所有文件到暂存区；</p>
-</li>
-<li><p>git commit -m &quot;local test 2&quot;</p>
-<p>提取暂存区到仓库区</p>
-</li>
-<li><p>git push -u origin master</p>
-<p>将本地的master分支推送到origin主机，并将origin主机设为默认主机；</p>
-<p>若再需要给origin推送则可直接 git push；</p>
-</li>
-
-</ol>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>模拟登陆界面</h1>
+<hr/>
+<form>
+ 账号:<br/>
+<input type="text" name="account" id="username">
+<br/>
+ 密码:<br/>
+<input type="password" name="psw" id="passw">
+<br/>
+</form> 
+<script type="text/javascript">
+function login()
+  { 
+    var user=document.getElementById("username").value;
+    var pass=document.getElementById("passw").value;
+    if(user==="123"&&pass==="123")
+    {
+      alert("登陆成功");
+    }
+    else 
+    {
+      alert("账号或密码错误，请重新输入");
+    }
+  }
+</script>
+<input type="button" onclick="login()" value="登陆" />
+</body>
+</html>
